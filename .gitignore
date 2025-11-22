@@ -1,0 +1,9 @@
+*.sln
+*.vcxproj
+*.vcxproj.filters
+.vs/
+packages/
+Debug/
+Release/
+x64/
+FFBPlugin.ini
