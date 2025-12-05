@@ -120,9 +120,6 @@ namespace FFBPluginGUI {
 	private: MetroFramework::Controls::MetroButton^ metroButton44;
 	private: MetroFramework::Controls::MetroButton^ metroButton45;
 	private: MetroFramework::Controls::MetroCheckBox^ metroCheckBox5;
-	private: MetroFramework::Controls::MetroTrackBar^ metroTrackBar1;
-	private: MetroFramework::Controls::MetroTextBox^ metroTextBox4;
-	private: MetroFramework::Controls::MetroLabel^ metroLabel1;
 	private: MetroFramework::Controls::MetroButton^ metroButton40;
 	private: MetroFramework::Controls::MetroButton^ metroButton46;
 	private: MetroFramework::Controls::MetroCheckBox^ metroCheckBox6;
@@ -245,9 +242,6 @@ namespace FFBPluginGUI {
 			this->metroButton44 = (gcnew MetroFramework::Controls::MetroButton());
 			this->metroButton45 = (gcnew MetroFramework::Controls::MetroButton());
 			this->metroCheckBox5 = (gcnew MetroFramework::Controls::MetroCheckBox());
-			this->metroTrackBar1 = (gcnew MetroFramework::Controls::MetroTrackBar());
-			this->metroTextBox4 = (gcnew MetroFramework::Controls::MetroTextBox());
-			this->metroLabel1 = (gcnew MetroFramework::Controls::MetroLabel());
 			this->metroButton40 = (gcnew MetroFramework::Controls::MetroButton());
 			this->metroButton46 = (gcnew MetroFramework::Controls::MetroButton());
 			this->metroCheckBox6 = (gcnew MetroFramework::Controls::MetroCheckBox());
@@ -586,78 +580,17 @@ namespace FFBPluginGUI {
 			// 
 			// ... (Unveränderter Code für metroCheckBox5)
 			// 
-			int EnableForceSpringEffectA = GetPrivateProfileInt(TEXT("Settings"), TEXT("EnableForceSpringEffect"), 0, TEXT(".\\FFBPlugin.ini"));
+			int EnableConstantInfA = GetPrivateProfileInt(TEXT("Settings"), TEXT("UseConstantInf"), 1, TEXT(".\\FFBPlugin.ini"));
 			this->metroCheckBox5->AutoSize = true;
 			this->metroCheckBox5->Location = System::Drawing::Point(193, 149);
 			this->metroCheckBox5->Name = L"metroCheckBox5";
 			this->metroCheckBox5->Size = System::Drawing::Size(165, 15);
 			this->metroCheckBox5->TabIndex = 55;
 			this->metroCheckBox5->TabStop = false;
-			this->metroCheckBox5->Text = L"Enable Global Spring Effect";
-			this->metroCheckBox5->Checked = EnableForceSpringEffectA;
+			this->metroCheckBox5->Text = L"Enable ConstantInf Mode";
+			this->metroCheckBox5->Checked = EnableConstantInfA;
 			this->metroCheckBox5->UseSelectable = true;
 			this->metroCheckBox5->CheckedChanged += gcnew System::EventHandler(this, &MameSelect::metroCheckBox5_CheckedChanged);
-			// 
-			// metroTrackBar1
-			// 
-			// ... (Unveränderter Code für metroTrackBar1)
-			// 
-			int ForceSpringStrength = GetPrivateProfileInt(TEXT("Settings"), TEXT("ForceSpringStrength"), 0, TEXT(".\\FFBPlugin.ini"));
-			this->metroTrackBar1->BackColor = System::Drawing::Color::Transparent;
-			this->metroTrackBar1->Location = System::Drawing::Point(23, 204);
-			this->metroTrackBar1->Name = L"metroTrackBar1";
-			this->metroTrackBar1->Value = ForceSpringStrength;
-			this->metroTrackBar1->Size = System::Drawing::Size(447, 23);
-			this->metroTrackBar1->TabIndex = 56;
-			this->metroTrackBar1->Text = L"metroTrackBar1";
-			this->metroTrackBar1->Scroll += gcnew System::Windows::Forms::ScrollEventHandler(this, &MameSelect::metroTrackBar1_Scroll);
-			// 
-			// metroTextBox4
-			// 
-			// ... (Unveränderter Code für metroTextBox4)
-			// 
-			this->metroTextBox4->CustomButton->Image = nullptr;
-			this->metroTextBox4->CustomButton->Location = System::Drawing::Point(425, 1);
-			this->metroTextBox4->CustomButton->Name = L"";
-			this->metroTextBox4->CustomButton->Size = System::Drawing::Size(21, 21);
-			this->metroTextBox4->CustomButton->Style = MetroFramework::MetroColorStyle::Blue;
-			this->metroTextBox4->CustomButton->TabIndex = 1;
-			this->metroTextBox4->CustomButton->Theme = MetroFramework::MetroThemeStyle::Light;
-			this->metroTextBox4->CustomButton->UseSelectable = true;
-			this->metroTextBox4->CustomButton->Visible = false;
-			this->metroTextBox4->Lines = gcnew cli::array< System::String^  >(1) { L"Global Spring Effect Strength" };
-			this->metroTextBox4->Location = System::Drawing::Point(23, 175);
-			this->metroTextBox4->MaxLength = 32767;
-			this->metroTextBox4->Name = L"metroTextBox4";
-			this->metroTextBox4->PasswordChar = '\0';
-			this->metroTextBox4->ReadOnly = true;
-			this->metroTextBox4->ScrollBars = System::Windows::Forms::ScrollBars::None;
-			this->metroTextBox4->SelectedText = L"";
-			this->metroTextBox4->SelectionLength = 0;
-			this->metroTextBox4->SelectionStart = 0;
-			this->metroTextBox4->ShortcutsEnabled = true;
-			this->metroTextBox4->Size = System::Drawing::Size(447, 23);
-			this->metroTextBox4->TabIndex = 57;
-			this->metroTextBox4->TabStop = false;
-			this->metroTextBox4->Text = L"Global Spring Effect Strength";
-			this->metroTextBox4->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
-			this->metroTextBox4->UseSelectable = true;
-			this->metroTextBox4->WaterMarkColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(109)),
-				static_cast<System::Int32>(static_cast<System::Byte>(109)), static_cast<System::Int32>(static_cast<System::Byte>(109)));
-			this->metroTextBox4->WaterMarkFont = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Pixel));
-			// 
-			// metroLabel1
-			// 
-			// ... (Unveränderter Code für metroLabel1)
-			// 
-			int ForceSpringStrength1 = GetPrivateProfileInt(TEXT("Settings"), TEXT("ForceSpringStrength"), 0, TEXT(".\\FFBPlugin.ini"));
-			this->metroLabel1->AutoSize = true;
-			this->metroLabel1->Location = System::Drawing::Point(233, 228);
-			this->metroLabel1->Name = L"metroLabel1";
-			this->metroLabel1->Text = System::Convert::ToString(ForceSpringStrength1);
-			this->metroLabel1->Size = System::Drawing::Size(0, 0);
-			this->metroLabel1->TabIndex = 58;
-			this->metroLabel1->Click += gcnew System::EventHandler(this, &MameSelect::metroLabel1_Click);
 			// 
 			// metroButton40
 			// 
@@ -1067,9 +1000,6 @@ namespace FFBPluginGUI {
 			this->Controls->Add(this->metroCheckBox6);
 			this->Controls->Add(this->metroButton46);
 			this->Controls->Add(this->metroButton40);
-			this->Controls->Add(this->metroLabel1);
-			this->Controls->Add(this->metroTextBox4);
-			this->Controls->Add(this->metroTrackBar1);
 			this->Controls->Add(this->metroCheckBox5);
 			this->Controls->Add(this->metroButton45);
 			this->Controls->Add(this->metroButton44);
@@ -1193,16 +1123,14 @@ namespace FFBPluginGUI {
 			WritePrivateProfileString(TEXT("Settings"), TEXT("Logging"), TEXT("0"), TEXT(".\\FFBPlugin.ini"));
 		}
 	}
-	private: System::Void metroCheckBox5_CheckedChanged(System::Object^ sender, System::EventArgs^ e) //Spring Effect
+	private: System::Void metroCheckBox5_CheckedChanged(System::Object^ sender, System::EventArgs^ e) //ConstantInf
 	{
-		if (metroCheckBox5->Checked)
-		{
-			WritePrivateProfileString(TEXT("Settings"), TEXT("EnableForceSpringEffect"), TEXT("1"), TEXT(".\\FFBPlugin.ini"));
-		}
-		else
-		{
-			WritePrivateProfileString(TEXT("Settings"), TEXT("EnableForceSpringEffect"), TEXT("0"), TEXT(".\\FFBPlugin.ini"));
-		}
+		WritePrivateProfileString(
+			TEXT("Settings"),
+			TEXT("UseConstantInf"),
+			metroCheckBox5->Checked ? TEXT("1") : TEXT("0"),
+			TEXT(".\\FFBPlugin.ini")
+		);
 	}
 	private: System::Void metroComboBox1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e)
 	{
@@ -1654,24 +1582,6 @@ namespace FFBPluginGUI {
 		this->Hide();
 		CartFury^ form = gcnew CartFury(this);
 		form->ShowDialog();
-	}
-
-
-
-	private: System::Void metroLabel1_Click(System::Object^ sender, System::EventArgs^ e) //Global Spring Effect Value
-	{
-
-	}
-	private: System::Void metroTrackBar1_Scroll(System::Object^ sender, System::Windows::Forms::ScrollEventArgs^ e) //Global Spring Effect Value Change
-	{
-		metroLabel1->Text = metroTrackBar1->Value.ToString();
-		Decimal value = metroTrackBar1->Value;
-		int myInt{ value };
-		char Result[16];
-		sprintf_s(Result, "%d", myInt);
-		{
-			WritePrivateProfileStringA("Settings", "ForceSpringStrength", Result, ".\\FFBPlugin.ini");
-		}
 	}
 	private: System::Void metroButton40_Click_1(System::Object^ sender, System::EventArgs^ e) //Double Axle
 	{
