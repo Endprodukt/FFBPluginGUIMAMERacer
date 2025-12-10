@@ -40,7 +40,7 @@ namespace FFBPluginGUI {
 
 			this->AutoAddLongTextBox(L"Modify how sine effect works", L"You can modify how you want effect");
 
-			this->AutoAddShortTrackBarBlock("SinePeriodDAxlet", L"Sine Period", 0, 100, L"Period of Sine Effect");
+			this->AutoAddShortTrackBarBlock("SinePeriodDAxle", L"Sine Period", 0, 100, L"Period of Sine Effect");
 			this->AutoAddShortTrackBarBlock("SineFadePeriodDAxle", L"Sine Fade Period", 0, 100, L"Fade Period of Sine Effect");
 			this->AutoAddShortTrackBarBlock("SineStrengthDAxle", L"Sine Strength", 0, 100, L"Strength of Sine Effect");
 
