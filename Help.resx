@@ -117,20 +117,21 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="metroLink1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="metroLink1.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
-  <metadata name="richTextBox1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  </data>
+  <data name="richTextBox1.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="richTextBox1.Text" xml:space="preserve">
-    <value>			       Help for exe games 
+    <value>			       How to install 
 
 1) Ensure visual runtime files are up to date. If un-sure then download &amp; install all in one visual runtime pack
 
-2) Copy all files in game folder from FFB Arcade Plugin to same folder as game exe file
+2) Copy all files to the same folder as your mame.exe
 
-3) Go to game exe folder &amp; Run FFBPluginGUI.exe
+3) Go to mame.exe folder &amp; run FFBPluginGUI.exe
 
 4) Go to Force Feedback Setup
 
@@ -138,9 +139,11 @@
 
 6) Modify any settings you wish &amp; close FFBPluginGUI.exe
 
-7) Run the game and enjoy</value>
+7) Run the game in Mame and enjoy
+
+8) All Model 2 games require the included mame version to function with FFB. </value>
   </data>
-  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="$this.Locked" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
 </root>

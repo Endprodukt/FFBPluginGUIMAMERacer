@@ -122,6 +122,7 @@ namespace FFBPluginGUI {
 			this->richTextBox1->TabIndex = 12;
 			this->richTextBox1->TabStop = false;
 			this->richTextBox1->Text = resources->GetString(L"richTextBox1.Text");
+			this->richTextBox1->TextChanged += gcnew System::EventHandler(this, &Help::richTextBox1_TextChanged);
 			// 
 			// Help
 			// 
@@ -149,5 +150,7 @@ namespace FFBPluginGUI {
 		this->Hide();
 		obj->Show();
 	}
-	};
+	private: System::Void richTextBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	}
+};
 }
