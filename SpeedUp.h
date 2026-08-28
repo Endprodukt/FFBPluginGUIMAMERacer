@@ -82,10 +82,13 @@ namespace FFBPluginGUI {
 				if (form->Controls->ContainsKey(L"metroButtonSpeedUp"))
 					continue;
 
+				form->SuspendLayout();
+
 				MetroButton^ speedUpButton = gcnew MetroButton();
 				speedUpButton->Location = System::Drawing::Point(23, 822);
 				speedUpButton->Name = L"metroButtonSpeedUp";
 				speedUpButton->Size = System::Drawing::Size(216, 23);
+				speedUpButton->TabIndex = 73;
 				speedUpButton->TabStop = false;
 				speedUpButton->Text = L"Speed Up";
 				speedUpButton->UseSelectable = true;
@@ -119,6 +122,9 @@ namespace FFBPluginGUI {
 					int row = i / 2;
 					gameButtons[i]->Location = System::Drawing::Point(column == 0 ? 23 : 254, 213 + (row * 29));
 				}
+
+				form->ResumeLayout(false);
+				form->PerformLayout();
 			}
 		}
 
