@@ -12,6 +12,7 @@ along with FFB Arcade Plugin GUI.If not, see < https://www.gnu.org/licenses/>.
 */
 
 #include "Form1.h"
+#include "SpeedUp.h"
 #include "SDL.h"
 
 using namespace System;
@@ -28,6 +29,8 @@ int main(int argc, char** argv)
 
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
+
+	FFBPluginGUI::SpeedUpGuiIntegration::Install();
 
 	FFBPluginGUI::Form1 form;
 	Application::Run(%form);
