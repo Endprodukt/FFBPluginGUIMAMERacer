@@ -41,13 +41,18 @@ namespace FFBPluginGUI {
 
 			this->New2ColsPage();
 
-			this->AutoAddLongTextBox(L"Set or remove button configuration below", L"Click then press any button");
+			this->AutoAddLongTextBox(L"Wheel / Joystick Buttons", L"Click then press any button");
 			this->AutoAddShortTextBox(L"Device Select Input", L"Button names for device, click below to set input for device");
 			this->AutoAddShortTextBox(L"Button Number", L"Button number set in FFBPlugin.ini for device");
 
 			this->AutoAddLongInputSelect("Button", "IncreaseFFBStrength", L"Increase FFB Strength");
 			this->AutoAddLongInputSelect("Button", "DecreaseFFBStrength", L"Decrease FFB Strength");
 			this->AutoAddLongInputSelect("Button", "ResetFFBStrength", L"Reset FFB Strength");
+
+			this->AutoAddLongTextBox(L"Keyboard Shortcuts", L"Optional - works in addition to wheel / joystick buttons");
+			this->AutoAddLongInputSelect("Key", "IncreaseFFBStrengthKey", L"Increase FFB Strength Key");
+			this->AutoAddLongInputSelect("Key", "DecreaseFFBStrengthKey", L"Decrease FFB Strength Key");
+			this->AutoAddLongInputSelect("Key", "ResetFFBStrengthKey", L"Reset FFB Strength Key");
 
 			this->Init();
 		}
