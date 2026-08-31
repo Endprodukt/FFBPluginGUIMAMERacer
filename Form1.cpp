@@ -13,6 +13,7 @@ along with FFB Arcade Plugin GUI.If not, see < https://www.gnu.org/licenses/>.
 
 #include "Form1.h"
 #include "SpeedUp.h"
+#include "DriversEdge.h"
 #include "SDL.h"
 
 using namespace System;
@@ -31,6 +32,7 @@ int main(int argc, char** argv)
 	Application::SetCompatibleTextRenderingDefault(false);
 
 	FFBPluginGUI::SpeedUpGuiIntegration::Install();
+	FFBPluginGUI::DriversEdgeGuiIntegration::Install();
 
 	FFBPluginGUI::Form1 form;
 	Application::Run(%form);
