@@ -126,6 +126,18 @@ namespace FFBPluginGUI {
 					gameButtons[i]->Location = System::Drawing::Point(column == 0 ? 23 : 254, 213 + (row * 29));
 				}
 
+				// Grow the MAME selection window to the actual number of game rows.
+				// The additional dynamically inserted game buttons otherwise extend below
+				// the original fixed 860-pixel client area.
+				if (gameButtons->Count > 0)
+				{
+					int rows = (gameButtons->Count + 1) / 2;
+					int contentBottom = 213 + ((rows - 1) * 29) + 23;
+					int requiredHeight = contentBottom + 20;
+					if (form->ClientSize.Height < requiredHeight)
+						form->ClientSize = System::Drawing::Size(form->ClientSize.Width, requiredHeight);
+				}
+
 				form->ResumeLayout(false);
 				form->PerformLayout();
 			}
