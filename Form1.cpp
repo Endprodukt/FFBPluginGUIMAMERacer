@@ -15,6 +15,7 @@ along with FFB Arcade Plugin GUI.If not, see < https://www.gnu.org/licenses/>.
 #include "SpeedUp.h"
 #include "DriversEdge.h"
 #include "CrusnExotica.h"
+#include "MAMESupermodelDefaultIni.h"
 #include "SDL.h"
 
 using namespace System;
@@ -24,6 +25,8 @@ using namespace MetroFramework::Forms;
 [STAThread]
 int main(int argc, char** argv)
 {
+	MAMESupermodelDefaultIni::EnsureIniExists();
+
 	SDL_SetHint(SDL_HINT_JOYSTICK_RAWINPUT, "0");
 	if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_JOYSTICK | SDL_INIT_HAPTIC | SDL_INIT_GAMECONTROLLER) < 0)
 	SDL_JoystickEventState(SDL_ENABLE);
