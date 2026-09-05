@@ -49,6 +49,7 @@ along with FFB Arcade Plugin GUI.If not, see < https://www.gnu.org/licenses/>.
 #include "STCC.h"
 #include "SuperChase.h"
 #include "SuperGT.h"
+#include "SuperMonacoGP.h"
 #include "ThrillDrive.h"
 #include "TurboOutrun.h"
 #include "VaporTrx.h"
@@ -825,6 +826,18 @@ namespace FFBPluginGUI {
 			this->metroButton60->UseSelectable = true;
 			//this->metroButton60->Enabled = false;
 			this->metroButton60->Click += gcnew System::EventHandler(this, &MameSelect::metroButton60_Click);
+			//
+			// metroButton34
+			//
+			// Super Monaco GP
+			this->metroButton34->Location = System::Drawing::Point(23, 822);
+			this->metroButton34->Name = L"metroButton34";
+			this->metroButton34->Size = System::Drawing::Size(216, 23);
+			this->metroButton34->TabIndex = 73;
+			this->metroButton34->TabStop = false;
+			this->metroButton34->Text = L"Super Monaco GP";
+			this->metroButton34->UseSelectable = true;
+			this->metroButton34->Click += gcnew System::EventHandler(this, &MameSelect::metroButton34_Click);
 			// 
 			// metroButton4
 			// 
@@ -1049,7 +1062,6 @@ namespace FFBPluginGUI {
 			this->Controls->Add(this->metroCheckBox2);
 			this->Controls->Add(this->metroTextBox3);
 			this->Controls->Add(this->metroTextBox2);
-			// this->Controls->Add(this->metroButton34); // Nicht verwendet
 			// this->Controls->Add(this->metroButton31); // Nicht verwendet
 			// this->Controls->Add(this->metroButton27); // Nicht verwendet
 			this->Controls->Add(this->metroButton26);
@@ -1094,6 +1106,7 @@ namespace FFBPluginGUI {
 			this->Controls->Add(this->metroButton15);
 			this->Controls->Add(this->metroButton59);
 			this->Controls->Add(this->metroButton60);
+			this->Controls->Add(this->metroButton34);
 
 
 			this->MaximizeBox = false;
@@ -1477,6 +1490,12 @@ namespace FFBPluginGUI {
 	{
 		this->Hide();
 		VirtuaRacing^ obj1 = gcnew VirtuaRacing(this);
+		obj1->ShowDialog();
+	}
+	private: System::Void metroButton34_Click(System::Object^ sender, System::EventArgs^ e)//Super Monaco GP
+	{
+		this->Hide();
+		SuperMonacoGP^ obj1 = gcnew SuperMonacoGP(this);
 		obj1->ShowDialog();
 	}
 	private: System::Void metroButton35_Click(System::Object^ sender, System::EventArgs^ e) //Hyperdrive
